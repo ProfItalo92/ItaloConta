@@ -1,0 +1,197 @@
+:root {
+  --cor-fundo: #f4f7f9;
+  --cor-primaria: #2e7d32;
+  --cor-secundaria: #c62828;
+  --cor-azul: #1565c0;
+  --cor-fonte: #333;
+  --cor-clara: #ffffff;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-fonte);
+  line-height: 1.5;
+}
+
+header {
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+header::before {
+  content: "";
+  background-image: url('controle-financeiro.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 0;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.052);
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+.form-section, .table-section {
+  background-color: var(--cor-clara);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--sombra);
+  margin-bottom: 2rem;
+}
+
+.Cadastro{
+  color: #f4f7f9;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+form input, form select, form button {
+  flex: 1 1 180px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+form button {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+
+.table-section{
+  background-image: url('Financeira-1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+table {
+  background-color: whitesmoke;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background-color: var(--cor-azul);
+  color: white;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+tfoot {
+  font-weight: bold;
+  background-color: #e8f5e9;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+button[onclick*='exportarPlanilha'] {
+  background-color: var(--cor-azul);
+  color: white;
+  border: none;
+}
+
+button[onclick*='imprimirPlanilha'] {
+  background-color: var(--cor-secundaria);
+  color: white;
+  border: none;
+}
+
+button.editar {
+  background-color: #ffa000;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border: none;
+}
+
+button.remover {
+  background-color: #d32f2f;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border: none;
+}
+
+.filtro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-container label {
+  font-weight: bold;
+  color: var(--cor-clara);
+}
+
+.filtro-container select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  background-color: var(--cor-clara);
+  color: var(--cor-fonte);
+  min-width: 100px;
+}
+
+.filtro-container button {
+  background-color: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filtro-container button:hover {
+  background-color: #1b5e20;
+}
